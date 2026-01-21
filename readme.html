@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SEO & Render Checker - Chrome 插件说明</title>
+  <style>
+    :root {
+      --primary: #4CAF50;
+      --dark: #2e7d32;
+      --light-bg: #f9f9f9;
+      --border: #ddd;
+      --text: #333;
+      --gray: #757575;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background-color: #fafafa;
+      padding: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    h1 {
+      font-size: 28px;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      color: var(--gray);
+      font-size: 16px;
+    }
+    h2 {
+      font-size: 22px;
+      margin: 24px 0 16px;
+      color: var(--dark);
+    }
+    h3 {
+      font-size: 18px;
+      margin: 20px 0 12px;
+    }
+    p, ul, ol {
+      margin-bottom: 16px;
+    }
+    ul, ol {
+      padding-left: 24px;
+    }
+    li {
+      margin-bottom: 6px;
+    }
+    .feature-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 16px;
+      margin: 16px 0;
+    }
+    .feature-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .feature-card h4 {
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+    code {
+      background: var(--light-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 0.95em;
+    }
+    pre {
+      background: #2d3748;
+      color: #e2e8f0;
+      padding: 14px;
+      border-radius: 6px;
+      overflow-x: auto;
+      font-family: monospace;
+      font-size: 14px;
+      margin: 16px 0;
+    }
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      color: var(--gray);
+      font-size: 14px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+    }
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+      body {
+        padding: 15px;
+      }
+      h1 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>SEO & Render Checker</h1>
+    <p class="subtitle">Chrome 插件 · 作者：limaomao · 支持中英双语</p>
+  </header>
+
+  <section>
+    <h2>✨ 功能简介</h2>
+    <p>
+      这是一款专为开发者和 SEO 优化人员设计的 Chrome 扩展，可一键分析网页的渲染方式、SEO 元标签、结构化数据（JSON-LD）、多语言支持（hreflang）及内容指标。
+    </p>
+
+    <div class="feature-list">
+      <div class="feature-card">
+        <h4>🔍 渲染类型检测</h4>
+        <p>自动判断页面是 SSR（服务端渲染）还是 CSR（客户端渲染）。</p>
+      </div>
+      <div class="feature-card">
+        <h4>🏷️ SEO 标签分析</h4>
+        <p>提取 title、description、canonical、Open Graph、Twitter Card 等关键元信息。</p>
+      </div>
+      <div class="feature-card">
+        <h4>🌐 Hreflang 支持</h4>
+        <p>清晰展示多语言版本链接，格式为 <code>zh-CN: https://...</code>。</p>
+      </div>
+      <div class="feature-card">
+        <h4>📦 结构化数据</h4>
+        <p>解析所有 JSON-LD 脚本，自动识别 <code>@type</code>，支持折叠/展开与复制。</p>
+      </div>
+      <div class="feature-card">
+        <h4>📊 内容字数统计</h4>
+        <p>分别计算整页与主体内容（排除 header/footer）的字符数与单词数。</p>
+      </div>
+      <div class="feature-card">
+        <h4>📤 一键导出</h4>
+        <p>支持导出完整报告为 JSON/CSV，或单独导出每个 JSON-LD 为文件。</p>
+      </div>
+      <div class="feature-card">
+        <h4>⚠️ 缺失字段高亮</h4>
+        <p>对缺失的关键字段（如 title、canonical）进行红色/橙色高亮警告。</p>
+      </div>
+      <div class="feature-card">
+        <h4>🌍 中英双语切换</h4>
+        <p>点击右上角按钮即可在中文与英文界面间切换。</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>📥 安装指南</h2>
+    <h3>方法一：从本地加载（开发/测试用）</h3>
+    <ol>
+      <li>下载本插件源码到本地（例如解压到 <code>C:\seo-checker</code>）</li>
+      <li>打开 Chrome 浏览器，访问 <code>chrome://extensions</code></li>
+      <li>开启右上角 <strong>“开发者模式”</strong></li>
+      <li>点击 <strong>“加载已解压的扩展程序”</strong></li>
+      <li>选择插件文件夹（如 <code>C:\seo-checker</code>）</li>
+      <li>安装成功后，点击工具栏图标即可使用</li>
+    </ol>
+
+    <h3>方法二：打包为 CRX（分发用）</h3>
+    <p>目前本插件未上架 Chrome 应用商店，如需分发：</p>
+    <ol>
+      <li>在 <code>chrome://extensions</code> 页面点击 <strong>“打包扩展程序”</strong></li>
+      <li>选择插件根目录，生成 <code>.crx</code> 和 <code>.pem</code> 文件</li>
+      <li>将 <code>.crx</code> 文件拖入 Chrome 即可安装（需开启开发者模式）</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>🔒 隐私与权限</h2>
+    <p>本插件仅在当前标签页运行，<strong>不收集任何用户数据</strong>，无需网络权限。所有分析均在本地完成。</p>
+    <p>所需权限仅为：</p>
+    <ul>
+      <li><code>activeTab</code>：读取当前页面内容</li>
+      <li><code>storage</code>：临时缓存 HTTP 状态码（可选）</li>
+      <li><code>scripting</code>：注入分析脚本</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>💡 使用提示</h2>
+    <ul>
+      <li>点击插件图标后，结果会自动刷新</li>
+      <li>缺失字段会以 ⚠️ 图标 + 背景色高亮显示</li>
+      <li>导出的 JSON 文件包含作者信息：<code>"author": "limaomao"</code></li>
+      <li>支持在任意网页（包括 HTTPS）使用</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>© 2026 SEO & Render Checker · Author: <strong>limaomao</strong></p>
+    <p>开源项目 · 欢迎反馈与贡献</p>
+  </footer>
+</body>
+</html>

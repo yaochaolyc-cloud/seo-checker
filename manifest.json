@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "__MSG_appName__",
+  "version": "2.4",
+  "description": "__MSG_appDesc__",
+  "default_locale": "zh",
+  "permissions": ["activeTab", "scripting", "webRequest", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
