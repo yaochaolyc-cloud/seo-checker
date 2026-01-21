@@ -1,0 +1,98 @@
+{
+  "appName": {
+    "message": "SEO 与渲染检测器"
+  },
+  "appDesc": {
+    "message": "检测页面 CSR/SSR、状态码、SEO 标签及内容字数，支持中英切换"
+  },
+  "langSwitch": {
+    "message": "English"
+  },
+  "loading": {
+    "message": "加载中..."
+  },
+  "renderType": {
+    "message": "渲染类型"
+  },
+  "statusCode": {
+    "message": "HTTP 状态码"
+  },
+  "basicInfo": {
+    "message": "基础信息"
+  },
+  "pageTitle": {
+    "message": "页面标题"
+  },
+  "canonical": {
+    "message": "Canonical"
+  },
+  "charset": {
+    "message": "字符编码"
+  },
+  "contentLanguage": {
+    "message": "内容语言"
+  },
+  "contentAnalysis": {
+    "message": "内容分析"
+  },
+  "fullChars": {
+    "message": "整页字符数"
+  },
+  "fullWords": {
+    "message": "整页单词数"
+  },
+  "mainChars": {
+    "message": "主体字符数（排除 header/footer）"
+  },
+  "mainWords": {
+    "message": "主体单词数"
+  },
+  "seoTags": {
+    "message": "SEO 标签"
+  },
+  "openGraph": {
+    "message": "Open Graph"
+  },
+  "twitterCard": {
+    "message": "Twitter Card"
+  },
+  "hreflangLinks": {
+    "message": "Hreflang 链接"
+  },
+  "structuredData": {
+    "message": "结构化数据"
+  },
+  "noData": {
+    "message": "未设置"
+  },
+  "exportJson": {
+    "message": "📥 导出 JSON"
+  },
+  "exportCsv": {
+    "message": "📊 导出 CSV"
+  },
+  "exportAllJsonLd": {
+    "message": "📁 导出所有结构化数据"
+  },
+  "noStructuredData": {
+    "message": "未检测到结构化数据"
+  },
+  "analysisComplete": {
+    "message": "✅ 分析完成！"
+  },
+  "mainWordCount": {
+    "message": "主体内容共 {count} 个单词。"
+  },
+  "error": {
+    "message": "❌ 分析失败"
+  },
+  "copy": {
+    "message": "复制"
+  },
+  "copied": {
+    "message": "已复制！"
+  },
+  "missing": {
+    "message": "⚠️ 缺失"
+  }
+}
