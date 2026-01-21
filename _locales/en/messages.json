@@ -1,0 +1,98 @@
+{
+  "appName": {
+    "message": "SEO & Render Checker"
+  },
+  "appDesc": {
+    "message": "Check CSR/SSR, HTTP status, SEO tags, and content metrics. Supports Chinese/English."
+  },
+  "langSwitch": {
+    "message": "中文"
+  },
+  "loading": {
+    "message": "Loading..."
+  },
+  "renderType": {
+    "message": "Render Type"
+  },
+  "statusCode": {
+    "message": "HTTP Status Code"
+  },
+  "basicInfo": {
+    "message": "Basic Info"
+  },
+  "pageTitle": {
+    "message": "Page Title"
+  },
+  "canonical": {
+    "message": "Canonical"
+  },
+  "charset": {
+    "message": "Charset"
+  },
+  "contentLanguage": {
+    "message": "Content-Language"
+  },
+  "contentAnalysis": {
+    "message": "Content Analysis"
+  },
+  "fullChars": {
+    "message": "Full Page Characters"
+  },
+  "fullWords": {
+    "message": "Full Page Words"
+  },
+  "mainChars": {
+    "message": "Main Content Characters (excl. header/footer)"
+  },
+  "mainWords": {
+    "message": "Main Content Words"
+  },
+  "seoTags": {
+    "message": "SEO Tags"
+  },
+  "openGraph": {
+    "message": "Open Graph"
+  },
+  "twitterCard": {
+    "message": "Twitter Card"
+  },
+  "hreflangLinks": {
+    "message": "Hreflang Links"
+  },
+  "structuredData": {
+    "message": "Structured Data"
+  },
+  "noData": {
+    "message": "Not set"
+  },
+  "exportJson": {
+    "message": "📥 Export JSON"
+  },
+  "exportCsv": {
+    "message": "📊 Export CSV"
+  },
+  "exportAllJsonLd": {
+    "message": "📁 Export All Structured Data"
+  },
+  "noStructuredData": {
+    "message": "No structured data detected"
+  },
+  "analysisComplete": {
+    "message": "✅ Analysis Complete!"
+  },
+  "mainWordCount": {
+    "message": "Main content has {count} words."
+  },
+  "error": {
+    "message": "❌ Analysis Failed"
+  },
+  "copy": {
+    "message": "Copy"
+  },
+  "copied": {
+    "message": "Copied!"
+  },
+  "missing": {
+    "message": "⚠️ Missing"
+  }
+}
